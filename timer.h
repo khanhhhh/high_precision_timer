@@ -1,4 +1,4 @@
-//#include<Windows.h>
+#include<Windows.h>
 #include<ctime>
 #include<cstdint>
 class timer
@@ -7,7 +7,7 @@ class timer
 	static int64_t freq;
 	timer()
 	{
-//		QueryPerformanceFrequency((LARGE_INTEGER*)&freq);
+		QueryPerformanceFrequency((LARGE_INTEGER*)&freq);
 	}
 	static timer *t;
 	public:
@@ -20,12 +20,9 @@ class timer
 	{}
 	inline int64_t now()
 	{
-		//LARGE_INTEGER t;
-		//QueryPerformanceCounter(&t);
-		//return t.QuadPart;
-		std::timespec t;
-		std::timespec_get(&t, CLOCK_MONOTONIC);
-		return t.tv_nsec;
+		LARGE_INTEGER t;
+		QueryPerformanceCounter(&t);
+		return t.QuadPart;
 	}
 	static inline double elapsed_time(int64_t t2, int64_t t1)
 	{
