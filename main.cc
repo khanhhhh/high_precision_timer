@@ -4,11 +4,13 @@
 #include<thread>
 void func()
 {
-	std::this_thread::sleep_for(std::chrono::milliseconds(1));
+	int x;
+	for (int i=0; i<1e6; ++i)
+		x += i;
 }
 int main()
 {
-	auto t = timer::gettimer();
+	auto t = timer();
 	auto t1 = t.now();
 	func();
 	auto t2 = t.now();
