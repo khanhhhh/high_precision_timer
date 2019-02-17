@@ -14,7 +14,8 @@ class timer
 	timer()
 	{
 		#ifdef _WIN32
-		if (0 == freq) QueryPerformanceFrequency((LARGE_INTEGER*)&freq);
+		if (0 == freq)
+			QueryPerformanceFrequency((LARGE_INTEGER*)&freq);
 		#endif
 	}
 	~timer()
