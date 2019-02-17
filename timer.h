@@ -28,7 +28,7 @@ class timer
 		QueryPerformanceCounter(&t);
 		time_point = 1000000000*t.QuadPart/freq;
 		#else
-		struct timespec tp;
+		timespec tp;
 		clock_gettime(CLOCK_MONOTONIC_RAW, &tp);
 		time_point = static_cast<int64_t>(1000000000*tp.tv_sec) + static_cast<int64_t>(tp.tv_nsec);
 		#endif
