@@ -8,10 +8,10 @@ void func()
 }
 int main()
 {
-	auto t = windows::timer::gettimer();
+	auto t = timer::gettimer();
 	auto t1 = t.now();
 	func();
 	auto t2 = t.now();
-	std::cout<<windows::timer::elapsed_time(t2, t1)<<std::endl;
+	std::cout<<timer::elapsed_time(t2, t1)<<std::endl;
 	return 0;
 }
