@@ -1,10 +1,10 @@
 #include<iostream>
 #include<timer.h>
+#include<chrono>
+#include<thread>
 void func()
 {
-	int x = 0;
-	for (int i=0; i<1000000; ++i)
-		x += i;
+	std::this_thread::sleep_for(std::chrono::milliseconds(1));
 }
 int main()
 {
