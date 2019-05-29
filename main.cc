@@ -2,11 +2,9 @@
 #include<timer.h>
 #include<chrono>
 #include<thread>
-inline void func()
+void func()
 {
-	int x;
-	for (int i=0; i<30; ++i)
-		x += i;
+	std::this_thread::sleep_for(std::chrono::seconds(1));
 }
 int main()
 {
