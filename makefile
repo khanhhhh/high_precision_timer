@@ -1,2 +1,2 @@
 all:
-	g++ -g -O0 -I. main.cc -o run.exe -O3
+	g++ -g -O3 -I. main.cc -o run.exe
