@@ -4,11 +4,9 @@
 #include<thread>
 int main()
 {
-	auto t = timer();
-	auto t1 = t.now();
-
-
-	auto t2 = t.now();
-	std::cout<<timer::elapsed_time(t2, t1)<<std::endl;
+	auto t1 = now();
+	std::this_thread::sleep_for(std::chrono::seconds(1));
+	auto t2 = now();
+	std::cout<<t2 - t1<<std::endl;
 	return 0;
 }
