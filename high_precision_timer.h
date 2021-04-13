@@ -2,8 +2,8 @@
 // Created by Khanh Nguyen Ngoc on 13/4/21.
 //
 
-#ifndef HIGH_PRECISION_TIMER_HPTIMER_H
-#define HIGH_PRECISION_TIMER_HPTIMER_H
+#ifndef HIGH_PRECISION_TIMER_HIGH_PRECISION_TIMER_H
+#define HIGH_PRECISION_TIMER_HIGH_PRECISION_TIMER_H
 namespace timer {
     int64_t now();
 
@@ -34,4 +34,4 @@ namespace timer {
 
 
 
-#endif //HIGH_PRECISION_TIMER_HPTIMER_H
+#endif //HIGH_PRECISION_TIMER_HIGH_PRECISION_TIMER_H

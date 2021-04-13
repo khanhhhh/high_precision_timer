@@ -1,5 +1,5 @@
 #include<iostream>
-#include"hptimer.h"
+#include"high_precision_timer.h"
 #include<chrono>
 #include<thread>
 int main()
